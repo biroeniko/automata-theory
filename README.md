@@ -13,7 +13,6 @@ The basic requirements for building the executable are:
 * Python 3
 * pip3
 * graphviz + python-pydot
-* matplotlib
 * networkx
 
 #### Installation on Ubuntu
@@ -22,7 +21,6 @@ The basic requirements for building the executable are:
 sudo apt-get install python3
 sudo apt-get install python3-pip
 sudo apt install python-pydot python-pydot-ng graphviz
-sudo apt-get install python3-matplotlib
 pip3 install networkx
 ```
 NOTE: this code was also tested with Python 2.7, with the corresponding packages 
@@ -45,13 +43,10 @@ You can also make your own graph files, defining the graph in the input file as 
 4. row: ending states, separated by spaces
 5. row: one transition per line, separated by spaces (state input state)
 
-Now, you should see the executable in the build file. If you run the executable, the application should look like this:
-![](https://github.com/biroeniko/mandelbrot/blob/master/img/demo.png)
-
 ## Built With
 
-* [SDL2](https://www.libsdl.org/) - used for display and control
-* [OpenMP](https://www.openmp.org/) - used for creating multiple threads for the tasks (pixel color calculation)
+* [graphviz](https://www.graphviz.org/) - used for displaying the graphs
+* [networkx](https://networkx.github.io/) - data structure for digraph
 
 ## Authors
 
