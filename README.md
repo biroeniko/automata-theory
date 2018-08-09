@@ -40,11 +40,24 @@ There are several example programmes, each of which uses the following input fil
 
 If you succesfully cloned the source files and you are currently in the project directory, you can simply run the script files.
 
-### Ignore not reachable and not productive vertices from the graph
+### Example codes
+
+#### 1. Ignore not reachable and not productive vertices from the graph
 For running the script, you have to provide the input and output files. The input file contains the graph in the aforementioned representation, the output file will contain the resulting graph.
 ```
 python3 ignoreNotOK.py -i graph1.txt -o output.txt
 ```
+#### 2. Test if the automata recognizes a specific word
+For running the script, you have to provide the input and output files. The input file contains the graph in the aforementioned representation, the output file will contain the resulting graph.
+```
+python recognizeWord.py -w 0001 -i testgraph.txt
+```
+Running this command, the word "0001" will be tested on the graph specified. There is also a tester script, which runs several tests from a predefined input file:
+```
+python3 testRecognizeWord.py
+```
+
+
 ## Built With
 
 * [graphviz](https://www.graphviz.org/) - used for displaying the graphs
