@@ -29,20 +29,22 @@ NOTE: this code was also tested with Python 2.7, with the corresponding packages
 
 This program have been tested on Ubuntu 16.04 but should work under any systems that fulfills the aforementioned requirements.
 
-#### Installation on Ubuntu
+## Usage instructions
 
-If you succesfully cloned the source files and you are currently in the project directory, you can simply run the script file by typing in the command line:
-
-```
-python3 ignoreNotOK.py -i graph1.txt -o output.txt
-```
-You can also make your own graph files, defining the graph in the input file as follows: 
+There are several example programmes, each of which uses the following input file standards for representing the graphs:
 1. row: all states, separated by spaces
 2. row: elements of the input dictionary, separated by spaces
 3. row: starting states, separated by spaces
 4. row: ending states, separated by spaces
 5. row: one transition per line, separated by spaces (state input state)
 
+If you succesfully cloned the source files and you are currently in the project directory, you can simply run the script files.
+
+### Ignore not reachable and not productive vertices from the graph
+For running the script, you have to provide the input and output files. The input file contains the graph in the aforementioned representation, the output file will contain the resulting graph.
+```
+python3 ignoreNotOK.py -i graph1.txt -o output.txt
+```
 ## Built With
 
 * [graphviz](https://www.graphviz.org/) - used for displaying the graphs
