@@ -98,21 +98,21 @@ def writeToFile(listOfVerticles, dictionary, listOfStartingVerticles, listOfEndi
 
 # usage message
 def usage(scriptName):
-    print('Usage: ' + scriptName + ' [-i <inputfilename>] [-o <outputfilename>]')
+    print('Usage: python3 ' + scriptName + ' [-i <inputfilename>] [-o <outputfilename>]')
 
 def main(argv):
     # argument parse
     try:
         opts, args = getopt.getopt(sys.argv[1:], "hi:o:", ["help", "input=", "output="])
     except getopt.GetoptError as err:
-        print('Usage: ' + argv[0] + ' [-i <inputfilename>] [-o <outputfilename>]')
+        usage(argv[0])
         print(err)
         sys.exit(2)
     inputFile = None
     outputFile = None
     for o, a in opts:
         if o in ("-h", "--help"):
-            print('Usage: ' + argv[0] + '[-i <inputfilename>] [-o outputfilename]')
+            usage(argv[0])
             sys.exit()
         elif o in ("-i", "--input"):
             inputFile = a
@@ -130,7 +130,7 @@ def main(argv):
         sys.exit()
 
     # plot the original graph
-    Popen(['python', 'plot.py',  inputFile])
+    Popen(['python3', 'plot.py',  inputFile])
 
     G = nx.DiGraph()
 
@@ -165,7 +165,7 @@ def main(argv):
     writeToFile(listOfVerticles, dictionary, listOfStartingVerticles, listOfEndingVerticles, G)
 
     # plot the resulting graph
-    Popen(['python', 'plot.py', outputFile])
+    Popen(['python3', 'plot.py', outputFile])
 
 if __name__ == "__main__":
     main(sys.argv)
